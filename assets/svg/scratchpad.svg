@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  width="480" height="320"
+  viewBox="0 0 480 320">
+  <g
+    stroke="rgb(38,145,252)"
+    stroke-width="1"
+    fill="rgb(147,200,254)"
+    font-size="16"
+  >
+    <path id="hoge"
+      d="
+        M 10 30 h 90 v 90 h -90 Z
+        M 30 50 h 50 v 50 h -50 Z
+      "
+      fill-rule="evenodd" 
+    />
+    <text>
+      <textPath href="#hoge">
+        く り 抜 き 四 角
+      </textPath>
+    </text>
+
+    <path id="hoge2"
+      d="
+        M 250 130
+        a 60 40 0 1 1 0,-1 Z
+        a 60 40 0 1 0 0,-1 Z
+        M 220 130
+        a 30 20 0 1 1 0,-1 Z
+      "
+      fill-rule="evenodd" 
+    />
+    <path id="hoge3"
+      d="
+        M 250 130
+        h -60 v 40 Z
+        h 60 v -40 Z
+        M 220 130
+        h -30 v -20 Z
+      "
+      stroke-width="1"
+      fill="transparent"
+      stroke="red"
+    />
+    <text>
+      <textPath href="#hoge2">
+        く り 抜 き ま る
+      </textPath>
+    </text>
+    <path id="hoge4"
+      d="
+        M 300 300
+        C 300 250 400 250 400 300
+      "
+      />
+    <circle cx="300" cy="300" r="5" />
+    <circle cx="300" cy="250" r="5" />
+    <circle cx="400" cy="250" r="5" />
+    <circle cx="400" cy="300" r="5" />
+    <path id="hoge5"
+    d="
+      M 50,200
+      Q 120,130 190,200
+      T 340,200
+    " />
+    <circle cx="50" cy="200" r="5" />
+    <circle cx="120" cy="120" r="5" />
+    <circle cx="200" cy="200" r="5" />
+    <circle cx="300" cy="300" r="5" />
+  </g>
+  
+</svg>
