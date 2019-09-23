@@ -1,51 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="320" height="320"
   viewBox="0 0 320 320">
   <defs>
     <filter id="Blur">
       <feGaussianBlur stdDeviation="4" />
     </filter>
-    <g id="ghostBG">
-      <path 
-        d="
-          M 40,110
-          H 100
-          C 100,180 40,180 40,110
-          M 130,110
-          H 190
-          C 190,180 130,180 130,110
-          M 100,200
-          L 130,200 115,170 100,200
-        "
-      />
-    </g>
-    <g id="ghost">
-      <path 
-        d="
-          M 310,220
-          C 200,400 -20,300 10,120
-          S 320,0 290,210
-          C 290,220 270,260 310,220
-          M 40,110
-          H 100
-          C 100,180 40,180 40,110
-          M 130,110
-          H 190
-          C 190,180 130,180 130,110
-          M 100,200
-          L 130,200 115,170 100,200
-        "
-        fill-rule="evenodd" 
-      />
-    </g>
+    <path id="ghost"
+      d="
+        M 310,220
+        C 200,400 -20,300 10,120
+        S 320,0 290,210
+        C 290,220 270,260 310,220
+        M 40,110
+        H 100
+        C 100,180 40,180 40,110
+        M 130,110
+        H 190
+        C 190,180 130,180 130,110
+        M 100,200
+        L 115,170 130,200 100,200
+      "
+    />
   </defs>
-  <use xlink:href="#ghost"
-    x="3" y="3"
-    filter="url(#Blur)"
-    fill="rgba(128,128,128,0.3)"
-  />
-  <use xlink:href="#ghost"
-    fill="rgba(255,255,255,1)"
-  />
+  <symbol viewBox="0 0 320 320">
+    <use xlink:href="#ghost" id="ghostShadow"
+      x="3" y="3"
+      filter="url(#Blur)"
+      fill="rgba(128,128,128,0.3)"
+      fill-rule="evenodd" 
+    />
+    <use xlink:href="#ghost" id="ghostBG"
+      fill="rgba(0,0,0,0.4)"
+    />
+    <use xlink:href="#ghost" id="ghostBody"
+      fill-rule="evenodd" 
+      fill="rgba(255,255,255,1)"
+    />
+  </symbol>
+  <g>
+    <use xlink:href="#ghostShadow" />
+    <use xlink:href="#ghostBG" />
+    <use xlink:href="#ghostBody" />
+  </g>
 </svg>
