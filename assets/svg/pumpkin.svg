@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 330 320">
+  viewBox="0 0 330 280">
   <defs>
     <g id="pumpkin">
       <path
@@ -68,7 +68,7 @@
       <feGaussianBlur stdDeviation="20" />
     </filter>
   </defs>
-  <symbol viewBox="0 0 320 320">
+  <symbol viewBox="0 0 320 280">
     <use xlink:href="#pumpkin" id="pumpkinBG"
       x="5" y="0"
       fill="#0a0a0a"
