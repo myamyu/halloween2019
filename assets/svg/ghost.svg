@@ -24,7 +24,7 @@
   </defs>
   <symbol viewBox="0 0 320 320">
     <use xlink:href="#ghost" id="ghostShadow"
-      x="3" y="3"
+      x="3" y="1"
       filter="url(#Blur)"
       fill="rgba(128,128,128,0.3)"
       fill-rule="evenodd" 
