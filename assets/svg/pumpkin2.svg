@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 330 280">
+  <defs>
+    <g id="pumpkin">
+      <path
+        d="
+          M 320,140
+          a 160,130 0 1 1 0,-1 Z
+
+          M 128,106
+          a 32,38 0 1 1 0,-1 Z
+
+          M 256,106
+          a 32,38 0 1 1 0,-1 Z
+
+          M 166,144
+          a 10,12 0 1 1 0,-1 Z
+
+          M 40,160
+          q 67,9 80,9
+          l 0,12 30,0 0,-11
+          q 20,1 64,-2
+          l 0,12 24,0 0,-15
+          q 26,-1 43,-5
+          q -22,22 -80,45
+          l 0,-12 -48,0 0,17
+          q -46,2 -114,-50
+        "
+      />
+      <path
+        d="
+          M 81,27
+          q -42,75 -34,133
+          M 48,168
+          q 4,46 36,85
+
+          M 135,12
+          q -20,50 -20,62
+          M 108,141
+          q -1,16 2,27
+          M 113,204
+          q 10,45 18,62
+
+          M 185,12
+          q 20,48 20,62
+          M 210,140
+          q 0,14 -2,28
+          M 203,205
+          q -10,45 -17,62
+
+          M 238,27
+          q 42,75 34,134
+          M 271,170
+          q -8,50 -37,84
+        "
+        stroke="rgb(0,0,0,0.5)"
+        stroke-width="3"
+        stroke-linecap="round"
+        fill="transparent"
+      />
+    </g>
+    <filter id="lamp">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+  </defs>
+  <symbol viewBox="0 0 320 280">
+    <use xlink:href="#pumpkin" id="pumpkinBG"
+      x="5" y="0"
+      fill="#0a0a0a"
+    />
+    <use xlink:href="#pumpkin" id="pumpkinBody"
+      x="5" y="0"
+      fill-rule="evenodd" 
+      fill="#F09F14"
+      stroke="#2d1f0a"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <ellipse id="pumpkinLamp"
+      cx="160" cy="170"
+      rx="90" ry="80"
+      filter="url(#lamp)"
+      fill="rgba(255,190,60,0.5)"
+    />
+  </symbol>
+  <g>
+    <use xlink:href="#pumpkinBG" />
+    <use xlink:href="#pumpkinLamp" />
+    <use xlink:href="#pumpkinBody" />
+  </g>
+</svg>
