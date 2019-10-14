@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 320 320">
+  <defs>
+    <path id="ghostBase"
+      d="
+        M 310,220
+        C 200,400 -20,300 10,120
+        S 320,0 290,210
+        C 290,220 270,260 310,220
+        M 40,110
+        H 100
+        C 100,180 40,180 40,110
+        M 130,110
+        H 190
+        C 190,180 130,180 130,110
+        M 100,200
+        L 115,170 130,200 100,200
+      "
+    />
+    <filter id="shadowFilter">
+      <feGaussianBlur stdDeviation="4" />
+    </filter>
+  </defs>
+  <symbol viewBox="0 0 320 320">
+    <g id="ghost">
+      <use xlink:href="#ghostBase"
+        x="3" y="1"
+        filter="url(#shadowFilter)"
+        fill="rgba(128,128,128,0.3)"
+        fill-rule="evenodd" 
+      />
+      <use xlink:href="#ghostBase"
+        fill="rgba(0,0,0,0.4)"
+      />
+      <use xlink:href="#ghostBase"
+        fill-rule="evenodd" 
+        fill="rgba(255,255,255,1)"
+      />
+    </g>
+  </symbol>
+  <use xlink:href="#ghost" />
+</svg>

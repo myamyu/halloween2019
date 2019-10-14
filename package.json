@@ -1,0 +1,30 @@
+{
+  "name": "halloween2019",
+  "version": "1.0.0",
+  "description": "ハロウィン、なんかやるぞ！",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myamyu/halloween2019.git"
+  },
+  "keywords": [
+    "halloween"
+  ],
+  "author": "myamyu",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/myamyu/halloween2019/issues"
+  },
+  "homepage": "https://github.com/myamyu/halloween2019/blob/master/README.md",
+  "devDependencies": {
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  }
+}

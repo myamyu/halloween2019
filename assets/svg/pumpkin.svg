@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 330 280">
+  <defs>
+    <g id="pumpkinBase">
+      <path
+        d="
+          M 320,140
+          a 160,130 0 1 1 0,-1 Z
+
+          M 60,120
+          q 5,-24 25,-45
+          q 20,24 55,45
+          q -40,3 -80,0
+
+          M 180,120
+          q 25,-10 55,-45
+          q 20,24 25,45
+          q -40,3 -80,0
+
+          M 150,148
+          l 10,-20 10,20 -20,0
+
+          M 40,160
+          q 67,9 80,9
+          l 0,12 30,0 0,-11
+          q 20,1 64,-2
+          l 0,12 24,0 0,-15
+          q 26,-1 43,-5
+          q -22,22 -80,45
+          l 0,-12 -48,0 0,17
+          q -46,2 -114,-50
+        "
+      />
+      <path
+        d="
+          M 81,27
+          q -42,75 -34,133
+          M 48,168
+          q 4,46 36,85
+
+          M 135,12
+          q -20,50 -23,88
+          M 110,122
+          q -2,20 2,46
+          M 117,205
+          q 10,45 18,62
+
+          M 185,12
+          q 20,50 23,89
+          M 210,122
+          q 2,20 -2,46
+          M 203,205
+          q -10,45 -17,62
+
+          M 238,27
+          q 42,75 34,134
+          M 271,170
+          q -8,50 -37,84
+        "
+        stroke="rgb(0,0,0,0.5)"
+        stroke-width="3"
+        stroke-linecap="round"
+        fill="transparent"
+      />
+    </g>
+    <filter id="lampFilter">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+  </defs>
+  <symbol viewBox="0 0 320 280">
+    <g id="pumpkin">
+      <use xlink:href="#pumpkinBase"
+        x="5" y="0"
+        fill="#0a0a0a"
+      />
+      <use xlink:href="#pumpkinBase"
+        x="5" y="0"
+        fill-rule="evenodd" 
+        fill="#F09F14"
+        stroke="#2d1f0a"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <ellipse
+        cx="160" cy="170"
+        rx="90" ry="80"
+        filter="url(#lampFilter)"
+        fill="rgba(255,190,60,0.5)"
+      />
+    </g>
+  </symbol>
+  <use xlink:href="#pumpkin" />
+</svg>
