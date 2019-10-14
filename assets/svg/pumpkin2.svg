@@ -2,7 +2,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   viewBox="0 0 330 280">
   <defs>
-    <g id="pumpkin">
+    <g id="pumpkin2Base">
       <path
         d="
           M 320,140
@@ -60,34 +60,32 @@
         fill="transparent"
       />
     </g>
-    <filter id="lamp">
+    <filter id="lamp2Filter">
       <feGaussianBlur stdDeviation="20" />
     </filter>
   </defs>
   <symbol viewBox="0 0 320 280">
-    <use xlink:href="#pumpkin" id="pumpkinBG"
-      x="5" y="0"
-      fill="#0a0a0a"
-    />
-    <use xlink:href="#pumpkin" id="pumpkinBody"
-      x="5" y="0"
-      fill-rule="evenodd" 
-      fill="#F09F14"
-      stroke="#2d1f0a"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <ellipse id="pumpkinLamp"
-      cx="160" cy="170"
-      rx="90" ry="80"
-      filter="url(#lamp)"
-      fill="rgba(255,190,60,0.5)"
-    />
+    <g id="pumpkin2">
+      <use xlink:href="#pumpkin2Base"
+        x="5" y="0"
+        fill="#0a0a0a"
+      />
+      <use xlink:href="#pumpkin2Base"
+        x="5" y="0"
+        fill-rule="evenodd" 
+        fill="#F09F14"
+        stroke="#2d1f0a"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <ellipse
+        cx="160" cy="170"
+        rx="90" ry="80"
+        filter="url(#lamp2Filter)"
+        fill="rgba(255,190,60,0.5)"
+      />
+    </g>
   </symbol>
-  <g>
-    <use xlink:href="#pumpkinBG" />
-    <use xlink:href="#pumpkinLamp" />
-    <use xlink:href="#pumpkinBody" />
-  </g>
+  <use xlink:href="#pumpkin2" />
 </svg>
