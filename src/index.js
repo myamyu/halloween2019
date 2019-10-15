@@ -1,3 +1,5 @@
+const d = document;
+
 const svgDom = (str) => {
   const parser = new DOMParser();
   const dom = parser.parseFromString(str, 'image/svg+xml');
@@ -5,7 +7,6 @@ const svgDom = (str) => {
 };
 
 const halloween = () => {
-  const d = document;
   const div = d.createElement('div');
   div.style = 'display:none;';
   d.getElementsByTagName('body')[0].appendChild(div);
@@ -15,8 +16,19 @@ const halloween = () => {
   div.appendChild(svgDom(require('../assets/svg/pumpkin2.svg')));
 };
 
-try {
-  halloween();
-} catch (e) {
-  console.error('ごめん。エラー。', e);
-};
+(() => {
+  try {
+    if (d.readyState === "complete") {
+      halloween();
+      return;
+    }
+  } catch (e) {
+    console.error('ごめん。エラー。', e);
+  };
+
+  d.addEventListener('readystatechange', () => {
+    if (d.readyState === "complete") {
+      halloween();
+    }
+  });
+})();
