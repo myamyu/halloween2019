@@ -1,0 +1,21 @@
+.halloween-ghost-will {
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+
+.halloween-pumpkin {
+  display: inline-block;
+  height: 2em;
+  margin-right: 0.4em;
+  vertical-align: middle;
+  width: auto;
+}
+
+.halloween-pumpkins {
+  display: inline-block;
+  height: 2.4em;
+  opacity: 0.8;
+  vertical-align: text-bottom;
+  width: auto;
+}

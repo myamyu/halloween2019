@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/myamyu/halloween2019/blob/master/README.md",
   "devDependencies": {
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.0",
     "svg-inline-loader": "^0.8.0",
     "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9"
