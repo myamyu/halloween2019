@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Halloween! 2019</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <a href="javascript:void(0);" id="happyHalloween">ハロウィン！</a>
+  <div>
+    <a href="javascript:void(0);" id="happyHalloween">ハロウィン！</a> ← Click!
+  </div>
   <header>
     <h1>みゃみゅ玉子のHappy Halloween 2019</h1>
     <p>ハロウィンこんな感じでどうでしょう？</p>
@@ -43,8 +46,10 @@
     <section>
       <h2>Halloween 2019 Scriptの使い方</h2>
       <ul>
-        <li><a class="bookmarklet" href="">Happy Halloween 2019</a>をブックマークバーへドラッグして登録してください。</li>
-        <li>うまくいかない場合はこのページをブックマークして、ブックマークのURLを以下のものに書き換えてください</li>
+        <li><a class="bookmarklet" href='javascript:(function(){var a=document,b=a.createElement("script");b.src="https://myamyu.github.io/halloween2019/js/myamyu-halloween2019.min.js";a.getElementsByTagName("head")[0].appendChild(b)})();'>Happy Halloween 2019</a>をブックマークバーへドラッグして登録してください。</li>
+        <li>うまくいかない場合はこのページをブックマークして、ブックマークのURLを以下のものに書き換えてください
+          <textarea readonly class="code">javascript:(function(){var a=document,b=a.createElement("script");b.src="https://myamyu.github.io/halloween2019/js/myamyu-halloween2019.min.js";a.getElementsByTagName("head")[0].appendChild(b)})();</textarea>
+        </li>
       </ul>
     </section>
   </main>
