@@ -1,7 +1,15 @@
-.halloween-ghost-will {
-  display: block;
-  height: 100px;
-  width: 100px;
+.moving-ghost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 94%;
+  width: 94vw;
+  height: 94%;
+  height: 94vh;
+}
+
+.halloween-ghost {
+  transform: scale(0.2);
 }
 
 .halloween-pumpkin {

@@ -16,12 +16,23 @@ const halloween = () => {
   div.appendChild(svgDom(require('../assets/svg/ghost.svg')));
   div.appendChild(svgDom(require('../assets/svg/pumpkin.svg')));
   div.appendChild(svgDom(require('../assets/svg/pumpkin2.svg')));
+  div.appendChild(svgDom(require('../assets/svg/happy-halloween.svg')));
 
-  // willが出現
   body.appendChild(svgDom(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320 320"
-    class="halloween-ghost-will">
-      <use xlink:href="#ghost" />
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 320 320" class="moving-ghost">
+      <use xlink:href="#ghost" class="halloween-ghost halloween-ghost-jack">
+        <animateMotion 
+          dur="30s" repeatCount="indefinite">
+          <mpath xlink:href="#happyPath" />
+        </animateMotion>
+      </use>
+      <use xlink:href="#ghost" class="halloween-ghost halloween-ghost-will">
+        <animateMotion 
+          dur="50s" repeatCount="indefinite">
+          <mpath xlink:href="#halloweenPath" />
+        </animateMotion>
+      </use>
     </svg>`));
 
   // listの頭にカボチャ
