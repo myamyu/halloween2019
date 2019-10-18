@@ -63,9 +63,6 @@
         fill="transparent"
       />
     </g>
-    <filter id="lampFilter">
-      <feGaussianBlur stdDeviation="20" />
-    </filter>
   </defs>
   <symbol viewBox="0 0 320 280">
     <g id="pumpkin">
@@ -81,12 +78,6 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-      />
-      <ellipse
-        cx="160" cy="170"
-        rx="90" ry="80"
-        filter="url(#lampFilter)"
-        fill="rgba(255,190,60,0.5)"
       />
     </g>
   </symbol>
