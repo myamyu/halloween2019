@@ -17,6 +17,13 @@ module.exports = () => {
         test: /\.svg$/,
         loader: 'svg-inline-loader',
       },
+      {
+        test: /\.css$/,
+        loader: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
     ],
   };
   return config;
