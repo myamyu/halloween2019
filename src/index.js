@@ -1,9 +1,12 @@
 const d = document;
+const myClass = 'myamyu-halloween-2019';
 
 const svgDom = (str) => {
   const parser = new DOMParser();
-  const dom = parser.parseFromString(str, 'image/svg+xml');
-  return dom.childNodes[0];
+  const domRoot = parser.parseFromString(str, 'image/svg+xml');
+  const dom = domRoot.childNodes[0];
+  dom.classList.add(myClass);
+  return dom;
 };
 
 const halloween = () => {
@@ -17,25 +20,49 @@ const halloween = () => {
   div.appendChild(svgDom(require('../assets/svg/pumpkin.svg')));
   div.appendChild(svgDom(require('../assets/svg/pumpkin2.svg')));
   div.appendChild(svgDom(require('../assets/svg/happy-halloween.svg')));
+  div.appendChild(svgDom(require('../assets/svg/halloween-bg.svg')));
 
+  // 背景
   body.appendChild(svgDom(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 0 320 320" class="moving-ghost">
-      <g class="halloween-ghost-jack">
-        <use xlink:href="#ghost" class="halloween-ghost" />
-        <animateMotion 
-          dur="100s" repeatCount="indefinite">
-          <mpath xlink:href="#happyPath" />
-        </animateMotion>
-      </g>
-      <g class="halloween-ghost-will">
-        <use xlink:href="#ghost" class="halloween-ghost" />
-        <animateMotion
-          dur="140s" repeatCount="indefinite">
-          <mpath xlink:href="#halloweenPath" />
-        </animateMotion>
-      </g>
+    viewBox="0 0 320 320" class="halloween-bg">
+      <defs>
+        <linearGradient id="BGGradient" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="rgb(4, 0, 8)" />
+          <stop offset="30%" stop-color="rgb(10, 0, 20)" />
+          <stop offset="100%" stop-color="rgb(108, 47, 138)" />
+        </linearGradient>
+      </defs>
+      <use xlink:href="#halloweenBG" />
     </svg>`));
+
+  // お化け動くよ
+  const movingGhost = svgDom(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 320 320" class="moving-ghost">
+    <g class="halloween-ghost-jack">
+      <use xlink:href="#ghost" class="halloween-ghost" />
+      <animateMotion 
+        dur="100s" repeatCount="indefinite">
+        <mpath xlink:href="#happyPath" />
+      </animateMotion>
+    </g>
+    <g class="halloween-ghost-will">
+      <use xlink:href="#ghost" class="halloween-ghost" />
+      <animateMotion
+        dur="140s" repeatCount="indefinite">
+        <mpath xlink:href="#halloweenPath" />
+      </animateMotion>
+    </g>
+  </svg>`);
+  body.appendChild(movingGhost);
+
+  movingGhost.addEventListener('click', () => {
+    const es = d.querySelectorAll(`.${myClass}`);
+    es.forEach((e) => {
+      e.parentNode.removeChild(e);
+    });
+  });
 
   // listの頭にカボチャ
   const lis = d.getElementsByTagName('li');

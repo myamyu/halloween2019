@@ -2,6 +2,8 @@
 
 サイトをハロウィン仕様でデコレーションするBookmarkletです。
 
+![ハロウィン](./halloween-screen.png)
+
 ## 使い方
 
 <a href='javascript:(function(){var a=document,b=a.createElement("script");b.src="https://myamyu.github.io/halloween2019/js/myamyu-halloween2019.min.js?_t="+(new Date()).getTime();a.getElementsByTagName("head")[0].appendChild(b)})();'>Happy Halloween 2019</a>をブックマークバーへドラッグして登録してください。
