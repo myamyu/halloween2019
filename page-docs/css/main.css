@@ -1,0 +1,11 @@
+body {
+  line-height: 1.8;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.code {
+  width: 90%;
+  height: 3em;
+  padding: 0.5em;
+}

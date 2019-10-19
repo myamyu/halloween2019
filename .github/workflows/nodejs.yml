@@ -15,11 +15,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-
     - name: npm install
       run: npm install
+
     - name: build the halloween
       run: npm run build --if-present
+    - name: cp page-docs
+      run: cp -pR ./page-docs/* ./public
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.4.0
