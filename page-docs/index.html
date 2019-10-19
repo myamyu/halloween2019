@@ -46,9 +46,9 @@
     <section>
       <h2>Halloween 2019 Scriptの使い方</h2>
       <ul>
-        <li><a class="bookmarklet" href='javascript:(function(){var a=document,b=a.createElement("script");b.src="https://myamyu.github.io/halloween2019/js/myamyu-halloween2019.min.js";a.getElementsByTagName("head")[0].appendChild(b)})();'>Happy Halloween 2019</a>をブックマークバーへドラッグして登録してください。</li>
+        <li><a class="bookmarklet" href='javascript:(function(){var a=document,b=a.createElement("script");b.src="https://myamyu.github.io/halloween2019/js/myamyu-halloween2019.min.js?_t="+(new Date()).getTime();a.getElementsByTagName("head")[0].appendChild(b)})();'>Happy Halloween 2019</a>をブックマークバーへドラッグして登録してください。</li>
         <li>うまくいかない場合はこのページをブックマークして、ブックマークのURLを以下のものに書き換えてください
-          <textarea readonly class="code">javascript:(function(){var a=document,b=a.createElement("script");b.src="https://myamyu.github.io/halloween2019/js/myamyu-halloween2019.min.js";a.getElementsByTagName("head")[0].appendChild(b)})();</textarea>
+          <textarea readonly class="code">javascript:(function(){var a=document,b=a.createElement("script");b.src="https://myamyu.github.io/halloween2019/js/myamyu-halloween2019.min.js?_t="+(new Date()).getTime();a.getElementsByTagName("head")[0].appendChild(b)})();</textarea>
         </li>
       </ul>
     </section>
@@ -59,7 +59,7 @@
   <script>
     document.getElementById('happyHalloween').addEventListener('click', function(){
       var sc = document.createElement('script');
-      sc.src = './js/myamyu-halloween2019.min.js';
+      sc.src = './js/myamyu-halloween2019.min.js?_t=' + (new Date()).getTime();
       document.getElementsByTagName('head')[0].appendChild(sc);
     });
   </script>
